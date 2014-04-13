@@ -9,6 +9,7 @@ import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.world.ChunkLoadEvent;
+import org.bukkit.event.world.PortalCreateEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class EventListener implements Listener {
@@ -23,6 +24,13 @@ public class EventListener implements Listener {
 		if (e.isNewChunk()){
 			Chunk c = e.getChunk();
 			fixChunk(c);
+		}
+	}
+	
+	@EventHandler
+	public void onPortalCreate(PortalCreateEvent e){
+		if (plugin.getConfig().getBoolean("config.DISABLE_NETHER")){
+			e.setCancelled(true);
 		}
 	}
 	

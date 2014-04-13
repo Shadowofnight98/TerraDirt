@@ -1,10 +1,9 @@
 name: TerraDirt
-version: 01.00.10
+version: 01.00.13
 main: me.capit.TerraDirt.TerraDirt
 
 website: https://github.com/Wehttam664/TerraDirt/wiki
 description: GameData_TerraDirt
 author: Wehttam664
 preix: TerraDirt
-load: STARTUP
 
